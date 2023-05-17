@@ -1,0 +1,113 @@
+<!-- ITT588
+    LAB EXERCISE WEEK 8
+    BY ANDREANNA BALQISH
+    CS2514A       -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W8 CSS LAB EXERCISE 1</title>
+
+    <!-- CSS styling -->
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #ffffff;
+          padding: 20px;
+        }
+        
+        h1 {
+          text-align: center;
+          color: #be0909;
+        }
+        
+        form {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #a6ffd5;
+          padding: 20px;
+          border-radius: 5px;
+        }
+        
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+          width: 100%;
+          padding: 10px;
+          border-radius: 3px;
+          box-sizing: border-box;
+          border: 1px solid #038020;
+        }
+        
+        select {
+          height: 40px;
+        }
+        
+        textarea {
+         width: 100%;
+         padding: 10px;
+         border-radius: 3px;
+         box-sizing: border-box;
+         border: 1px solid #038020;
+         resize: vertical; /* Allow vertical resizing */
+         height: 100px; /* Set desired height */
+        }
+  
+        input[type="submit"] {
+          display: block;
+          margin-top: 20px;
+          background-color: #4741fc;
+          color: #ffffff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+          background-color: #555555;
+        }
+      </style>   
+</head>
+<body>
+  
+  <form>
+    <h1>Hotel Booking Form</h1>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="checkin">Check-in Date</label>
+    <input type="date" id="checkin" name="checkin" required>
+
+    <label for="checkout">Check-out Date</label>
+    <input type="date" id="checkout" name="checkout" required>
+
+    <label for="guests">Number of Guests</label>
+    <input type="number" id="guests" name="guests" min="1" required>
+
+    <label for="roomtype">Room Type</label>
+    <select id="roomtype" name="roomtype" required>
+      <option value="">Select Room Type</option>
+      <option value="single">Single</option>
+      <option value="double">Double</option>
+      <option value="suite">Suite</option>
+    </select>
+
+    <label for="additional">Additional Requirements</label>
+    <textarea id="additional" name="additional"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
